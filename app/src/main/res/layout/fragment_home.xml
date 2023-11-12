@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="w,16:9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:spanCount="4"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:padding="@dimen/edge_inset_x_large"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            tools:layout_height="100dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_marginTop="100dp"
+                android:background="?attr/colorSurfaceVariant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:clipToPadding="false"
+                    android:padding="@dimen/edge_inset_x_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        app:strokeWidth="0dp"
+                        android:layout_marginEnd="@dimen/edge_inset_large"
+                        app:cardElevation="1dp"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:padding="@dimen/edge_inset_large"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="My e-tickets"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/edge_inset_x_large"
+                                    android:textAppearance="@style/TextAppearance.Material3.LabelLarge" />
+
+                                <ImageView
+                                    android:src="@drawable/icons_tow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:text="There aren't any yet."
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:layout_height="0dp"
+                                android:alpha="0.5"
+                                android:layout_marginVertical="@dimen/edge_inset_medium"
+                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
+
+                            <TextView
+                                android:text="Retrieve here"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="?attr/colorPrimary"
+                                android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        app:strokeWidth="0dp"
+                        app:cardElevation="1dp"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:padding="@dimen/edge_inset_large"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Park hours"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/edge_inset_x_large"
+                                    android:textAppearance="@style/TextAppearance.Material3.LabelLarge" />
+
+                                <ImageView
+                                    android:src="@drawable/icon_one"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:text="Today, 13 Feb \n10am - 5pm"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:layout_height="0dp"
+                                android:layout_marginVertical="@dimen/edge_inset_medium"
+                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
+
+                            <TextView
+                                android:text="Plan my visit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="?attr/colorPrimary"
+                                android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/edge_inset_medium"
+                    android:paddingHorizontal="@dimen/edge_inset_x_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Upcoming Shows"
+                        android:id="@+id/upComeTitile"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/edge_inset_x_large"
+                        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
+
+                    <TextView
+                        android:id="@+id/upComeSeeAll"
+                        android:textColor="?attr/colorPrimary"
+                        android:text="View all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upComeRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:clipToPadding="false"
+                    android:padding="@dimen/edge_inset_x_large"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

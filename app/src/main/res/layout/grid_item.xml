@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/edge_inset_medium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/gridItemImage"
+        tools:src="@drawable/fish"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:padding="@dimen/edge_inset_x_large"
+        android:background="@drawable/grid_item_background"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <TextView
+        android:id="@+id/gridItemText"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:layout_marginTop="@dimen/edge_inset_medium"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="fisn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
